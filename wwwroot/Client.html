@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Simple client</title>
+	<script src="jquery-3.6.1.min.js" asp-append-version="true"></script>
+	<script src="Client.js" asp-append-version="true"></script>
+</head>
+<body>
+	<div>
+		<div>
+			Enter server url here or stay it as is:
+			<input type="text" id="serverUrl" placeholder="https://localhost:44354" />
+			Default was: "https://localhost:44354"
+		</div>
+	</div>
+	<div>
+		<input type="file" accept=".html" id="inputFile">
+		<button id="uploadFileBtn">Convert</button>
+	</div>
+
+	<div id="processing" hidden>
+		<h3>Please wait, your file is converting...</h3>
+	</div>
+	<div id="errorfileSize" hidden>
+		<h3>You didn't select a file or file size is less than 0.</h3>
+		<h3>Try one more time, please.</h3>
+	</div>
+	<div id="errorConverting" hidden>
+		<h3>There is some error while converting file.</h3>
+		<h3>Please try again.</h3>
+	</div>
+	<div id="loadingFileList" hidden>
+		<h3>Please watit, loading file list...</h3>
+	</div>
+	<div id="deleting" hidden>
+		<h3>Please wait, deleting files...</h3>
+	</div>
+	<div id="errorLoadFileList" hidden>
+		<h3>There is some errors while loading file list.</h3>
+	</div>
+	<div id="errorDeleteFiles" hidden>
+		<h3>There is some errors while deleting files.</h3>
+	</div>
+
+	<div id="convertedFilesList"></div>
+
+	<div>
+		<button id="delFilesBtn" hidden>Delete all files</button>
+	</div>
+
+</body>
+</html>
